@@ -1,6 +1,6 @@
 import { Box, Stack, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { RiAppsLine, RiBankCardLine, RiBoxingLine, RiDashboardLine, RiHistoryLine, RiMessageLine, RiPhoneLine } from "react-icons/ri";
+import { RiAppsLine, RiBankCardLine, RiBoxingLine, RiDashboardLine, RiHistoryLine, RiLogoutCircleLine, RiMessageLine, RiPhoneLine } from "react-icons/ri";
 import { SidebarItem } from "./SidebarItem";
 
 export function Sidebar(){
@@ -69,6 +69,11 @@ export function Sidebar(){
                             icon={RiMessageLine} 
                             active={router.pathname === '/inbox'} 
                             href="/inbox"
+                        />
+                        <SidebarItem 
+                            name="Sair" 
+                            icon={RiLogoutCircleLine} 
+                            href="/"
                         />
                     </Stack>
                 </Box>

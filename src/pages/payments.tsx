@@ -1,8 +1,8 @@
 import { Flex, SimpleGrid, Stack } from "@chakra-ui/react";
-import { Header } from "../components/Header";
+import { Header } from "../components/Panel/Header";
 import { Sidebar } from "../components/Sidebar/Sidebar";
-import { GridBox } from "../components/GridBox";
-import { PaymentItem } from "../components/PaymentItem";
+import { GridBox } from "../components/Panel/GridBox";
+import { PaymentItem } from "../components/Panel/PaymentItem";
 
 export default function Payments(){
     return(

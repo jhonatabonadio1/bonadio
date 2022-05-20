@@ -1,10 +1,9 @@
 import { Box, Flex, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import { Header } from "../components/Header";
+import { Header } from "../components/Panel/Header";
 import { Sidebar } from "../components/Sidebar/Sidebar";
 import CountUp from 'react-countup';
-import { GridBox } from "../components/GridBox";
-import { HistoryItem } from "../components/HistoryItem";
-import { NotificationItem } from "../components/NotificationItem";
+import { GridBox } from "../components/Panel/GridBox";
+import { NotificationItem } from "../components/Panel/NotificationItem";
 
 export default function Dashboard(){
 

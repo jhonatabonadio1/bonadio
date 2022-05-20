@@ -1,7 +1,7 @@
 import { Box, Flex, Icon, SimpleGrid, Stack, Input, Text, HStack, Avatar } from "@chakra-ui/react";
-import { Header } from "../components/Header";
+import { Header } from "../components/Panel/Header";
 import { Sidebar } from "../components/Sidebar/Sidebar";
-import { GridBox } from "../components/GridBox";
+import { GridBox } from "../components/Panel/GridBox";
 import { MessageCard } from "../components/Inbox/MessageCard";
 import { InboxHeader } from "../components/Inbox/Header";
 import { RiSendPlane2Line } from "react-icons/ri";
