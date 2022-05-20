@@ -41,17 +41,17 @@ export function HistoryItem({author, date, project}: History){
                 borderRightWidth={1}
                 borderColor="gray.700"
             >
-            <Text
-                fontWeight="bold"
-            >{project.name}</Text>
-            <Text
-                color="gray.300"
-            >
-                {date}
-                <Text as="span" fontWeight="bold" ml="1">
-                    · #{project.id}
+                <Text
+                    fontWeight="bold"
+                >{project.name}</Text>
+                    <Text
+                        color="gray.300"
+                    >
+                    {date}
+                    <Text as="span" fontWeight="bold" ml="1">
+                        · #{project.id}
+                    </Text>
                 </Text>
-            </Text>
             </Box>
             <HStack
                 spacing="4"
