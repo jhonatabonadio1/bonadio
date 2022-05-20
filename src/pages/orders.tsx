@@ -18,7 +18,27 @@ export default function Orders(){
                                 name="Pedidos"
                             >
                                 <Stack spacing="4">
-                                   <OrderItem />
+                                   <OrderItem 
+                                        date="24 de abril às 11:14"
+                                        description="Site de rifas"
+                                        id="17283900003"
+                                        name="Criação de site avançado"
+                                        status="Pedido aprovado"
+                                   />
+                                    <OrderItem 
+                                        date="24 de abril às 11:14"
+                                        description="Site de rifas"
+                                        id="17283900002"
+                                        name="Aplicativo iOS"
+                                        status="Pedido pendente"
+                                   />
+                                    <OrderItem 
+                                        date="24 de abril às 11:14"
+                                        description="Site de rifas"
+                                        id="17283900001"
+                                        name="Aplicativo Android"
+                                        status="Pedido recusado"
+                                   />
                                 </Stack>
                             </GridBox>
                         </SimpleGrid>

@@ -1,7 +1,15 @@
 import { Avatar, Box, Flex, HStack, Icon, Stack, Text } from "@chakra-ui/react";
 import { RiArrowRightLine, RiCheckboxBlankCircleFill } from "react-icons/ri";
 
-export function OrderItem(){
+interface OrderItem{
+    id: string;
+    name: string;
+    description: string;
+    status: "Pedido aprovado" | "Pedido pendente" | "Pedido recusado";
+    date: string;
+}
+
+export function OrderItem({id, name, description, status, date}: OrderItem){
     return(
         <Flex
             align="center"
@@ -16,8 +24,8 @@ export function OrderItem(){
                 w="56"
             >
                 <Box>
-                    <Text fontWeight="bold">Criação de site avançado</Text>
-                    <Text color="gray.300">Site de rifas</Text>
+                    <Text fontWeight="bold">{name}</Text>
+                    <Text color="gray.300">{description}</Text>
                 </Box>
             </HStack>
             <Box
@@ -28,15 +36,23 @@ export function OrderItem(){
                 borderColor="gray.700"
             >
                 <Flex align="center">
-                    <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="green.300"/>
-                    <Text fontWeight="bold">Pedido Aprovado</Text>
+                    {
+                        status == "Pedido aprovado" && <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="green.300"/>
+                    }
+                    {
+                        status == "Pedido pendente" && <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="orange.400"/>
+                    }
+                    {
+                        status == "Pedido recusado" && <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="red.400"/>
+                    }
+                    <Text fontWeight="bold">{status}</Text>
                 </Flex>
             <Text
                 color="gray.300"
             >
-                #17284600001
+                #{id}
                 <Text as="span" fontWeight="bold" ml="1">
-                    · 10 de maio de 2022 às 15:23
+                    · {date}
                 </Text>
             </Text>
             </Box>

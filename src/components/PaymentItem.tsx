@@ -1,7 +1,16 @@
-import { Avatar, Box, Flex, HStack, Icon, Stack, Text } from "@chakra-ui/react";
-import { RiArrowRightLine, RiCheckboxBlankCircleFill } from "react-icons/ri";
+import {  Box, Flex, HStack, Icon, Text } from "@chakra-ui/react";
+import { RiCheckboxBlankCircleFill } from "react-icons/ri";
 
-export function PaymentItem(){
+interface Payment{
+    name: string;
+    method: string;
+    paymentMethod: string;
+    value: string,
+    description: string
+    status: "Aprovado" | "Pendente" | "Recusado"
+}
+
+export function PaymentItem({name, method, paymentMethod, value, description, status}: Payment){
     return(
         <Flex
             align="center"
@@ -16,8 +25,8 @@ export function PaymentItem(){
                 w="56"
             >
                 <Box>
-                    <Text fontWeight="bold">Criação de site avançado</Text>
-                    <Text color="gray.300">Cartão de crédito</Text>
+                    <Text fontWeight="bold">{name}</Text>
+                    <Text color="gray.300">{method}</Text>
                 </Box>
             </HStack>
             <Box
@@ -28,20 +37,29 @@ export function PaymentItem(){
                 borderColor="gray.700"
             >
                 <Flex align="center">
-                    <Text fontWeight="bold">R$7500,00 · <Text as="span" fontWeight="normal" color="gray.300">Crédito Parcelado</Text></Text>
+                    <Text fontWeight="bold">{value} · <Text as="span" fontWeight="normal" color="gray.300">{paymentMethod}</Text></Text>
                 </Flex>
             <Text
                 color="gray.300"
             >
-                6x de R$1150,00 · CET 2,6% ao mês
+                {description}
             </Text>
             </Box>
             <HStack
                 spacing="4"
             >
                 <Flex align="center">
-                    <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="green.300"/>
-                    <Text fontWeight="bold">Aprovado</Text>
+                    {
+                        status === "Aprovado" && <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="green.300"/>
+                    }
+                    {
+                        status === "Pendente" && <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="orange.400"/>
+                    }
+                    {
+                        status === "Recusado" && <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="red.300"/>
+                    }
+                    
+                    <Text fontWeight="bold">{status}</Text>
                 </Flex>
             </HStack>
         </Flex>

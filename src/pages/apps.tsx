@@ -18,7 +18,24 @@ export default function Applications(){
                                 name="Meus aplicativos"
                             >
                                 <Stack spacing="4">
-                                   <AppItem />
+                                   <AppItem 
+                                        id="172846"
+                                        appName="Site de rifas"
+                                        status="Em andamento"
+                                        lastCommit={{
+                                            date: "há 2 horas atrás",
+                                            name: "Finalizando o projeto"
+                                        }}
+                                   />
+                                   <AppItem 
+                                        id="172846"
+                                        appName="Site institucional"
+                                        status="Concluído"
+                                        lastCommit={{
+                                            date: "há 2 horas atrás",
+                                            name: "Finalizando o projeto"
+                                        }}
+                                   />
                                 </Stack>
                             </GridBox>
                         </SimpleGrid>

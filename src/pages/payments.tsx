@@ -18,7 +18,22 @@ export default function Payments(){
                                 name="Pagamentos"
                             >
                                 <Stack spacing="4">
-                                   <PaymentItem />
+                                   <PaymentItem 
+                                        name="Criação de site avançado"
+                                        description="6x de R$1500,00"
+                                        method="Cartão de crédito"
+                                        paymentMethod="Crédito parcelado"
+                                        status="Aprovado"
+                                        value="R$7500,00"
+                                   />
+                                   <PaymentItem 
+                                        name="Criação de site avançado"
+                                        description="6x de R$1500,00"
+                                        method="Cartão de crédito"
+                                        paymentMethod="Crédito parcelado"
+                                        status="Pendente"
+                                        value="R$7500,00"
+                                   /> 
                                 </Stack>
                             </GridBox>
                         </SimpleGrid>

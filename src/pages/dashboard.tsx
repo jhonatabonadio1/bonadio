@@ -54,7 +54,13 @@ export default function Dashboard(){
                                 name="Última notificação"
                             >
                                 <Stack spacing="4">
-                                    <NotificationItem />
+                                    <NotificationItem 
+                                        date="Há 2 dias"
+                                        text="lhe enviou uma mensagem"
+                                        author={{
+                                            name: "Pedro Viana"
+                                        }}
+                                    />
                                 </Stack>
                             </GridBox>
                         </SimpleGrid>

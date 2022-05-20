@@ -18,12 +18,50 @@ export default function History(){
                                 name="Histórico"
                             >
                                 <Stack spacing="4">
-                                   <HistoryItem />
-                                   <HistoryItem />
-                                   <HistoryItem />
-                                   <HistoryItem />
-                                   <HistoryItem />
-                                   <HistoryItem />
+                                   <HistoryItem 
+                                        author={{
+                                            name: "Jhonata Lima",
+                                            description: "Desenvolvedor"
+                                        }}
+                                        date="Publicado há 2 horas atrás"
+                                        project={{
+                                            id: "81495184",
+                                            name: "Site de rifas"
+                                        }}
+                                   />
+                                    <HistoryItem 
+                                        author={{
+                                            name: "Jhonata Lima",
+                                            description: "Desenvolvedor"
+                                        }}
+                                        date="Publicado há 2 horas atrás"
+                                        project={{
+                                            id: "81495184",
+                                            name: "Site de rifas"
+                                        }}
+                                   />
+                                    <HistoryItem 
+                                        author={{
+                                            name: "Jhonata Lima",
+                                            description: "Desenvolvedor"
+                                        }}
+                                        date="Publicado há 2 horas atrás"
+                                        project={{
+                                            id: "81495184",
+                                            name: "Site de rifas"
+                                        }}
+                                   />
+                                    <HistoryItem 
+                                        author={{
+                                            name: "Jhonata Lima",
+                                            description: "Desenvolvedor"
+                                        }}
+                                        date="Publicado há 2 horas atrás"
+                                        project={{
+                                            id: "81495184",
+                                            name: "Site de rifas"
+                                        }}
+                                   />
                                 </Stack>
                             </GridBox>
                         </SimpleGrid>

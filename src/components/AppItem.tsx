@@ -1,7 +1,19 @@
 import { Avatar, Box, Flex, HStack, Icon, Stack, Text } from "@chakra-ui/react";
 import { RiArrowRightLine, RiCheckboxBlankCircleFill } from "react-icons/ri";
 
-export function AppItem(){
+interface App{
+    id: string
+    appName: string;
+    appImage?: string;
+    status: "Em andamento" | "Concluído";
+    lastCommit?: {
+        date: string;
+        name: string;
+    }
+}
+
+export function AppItem({id, appName, appImage, status, lastCommit}: App){
+
     return(
         <Flex
             align="center"
@@ -15,10 +27,10 @@ export function AppItem(){
                 borderColor="gray.700"
                 w="56"
             >
-                <Avatar size="md" name="Site de Rifas"/>
+                <Avatar size="md" name={appName} src={appImage}/>
                 <Box>
-                    <Text fontWeight="bold">Site de rifas</Text>
-                    <Text color="gray.300">#172846</Text>
+                    <Text fontWeight="bold">{appName}</Text>
+                    <Text color="gray.300">#{id}</Text>
                 </Box>
             </HStack>
             <Box
@@ -29,17 +41,25 @@ export function AppItem(){
                 borderColor="gray.700"
             >
                 <Flex align="center">
-                    <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="orange.400"/>
-                    <Text fontWeight="bold">Em Andamento</Text>
+                    {
+                        status === "Em andamento" && <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="orange.400"/>
+                    }
+                    {
+                        status === "Concluído" && <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="green.300"/>
+                    }
+                    <Text fontWeight="bold">{status}</Text>
                 </Flex>
-            <Text
-                color="gray.300"
-            >
-                Finalizando o projeto
-                <Text as="span" fontWeight="bold" ml="1">
-                    · Publicado há 2 horas atrás
+            {
+                lastCommit &&
+                <Text
+                    color="gray.300"
+                >
+                    {lastCommit.name}
+                    <Text as="span" fontWeight="bold" ml="1">
+                    · Publicado {lastCommit.date}
+                    </Text>
                 </Text>
-            </Text>
+            }
             </Box>
             <HStack
                 spacing="4"

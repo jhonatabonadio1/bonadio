@@ -1,7 +1,18 @@
 import { Avatar, Box, Flex, HStack, Icon, Stack, Text } from "@chakra-ui/react";
 import { RiArrowRightLine, RiChat1Line, RiCheckboxBlankCircleFill } from "react-icons/ri";
 
-export function NotificationItem(){
+interface Notification{
+    date: string;
+    read?: boolean;
+    author?: {
+        name: string;
+        avatar?: string;
+    };
+    text: string;
+}
+
+export function NotificationItem({date, read, author, text}: Notification){
+
     return(
         <Flex
             align="center"
@@ -13,18 +24,25 @@ export function NotificationItem(){
                 mr="8"
                 flex="1"
             >
-                <Avatar size="md" name="Pedro Viana"/>
+                {
+                    !!author &&
+                    <Avatar size="md" name={author.name} src={author.avatar}/>
+                }
                 <Box>
-                    <Text fontWeight="bold">Pedro Viana <Text as="span" fontWeight="normal">lhe enviou uma nova mensagem</Text></Text>
-                    <Text color="gray.300">Há 2 dias</Text>
+                    <Text fontWeight="bold">{author && author.name} <Text as="span" fontWeight="normal">{text}</Text></Text>
+                    <Text color="gray.300">{date}</Text>
                 </Box>
             </HStack>
             
-            <HStack
-                spacing="4"
-            >
-                <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="pink.500"/>
-            </HStack>
+            {
+                !read && 
+                <HStack
+                    spacing="4"
+                >
+                    <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="pink.500"/>
+                </HStack>
+            }
+            
         </Flex>
     )
 }
