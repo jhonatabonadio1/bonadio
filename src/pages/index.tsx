@@ -1,8 +1,7 @@
-import { Box, Button, ButtonGroup, Flex, Icon, Stack, Text } from '@chakra-ui/react'
-import { BeatLoader } from 'react-spinners'
+import { Button, Flex, Stack, Text } from '@chakra-ui/react'
 import { Header } from '../components/Header/Header'
 
-import Illustration from '../assets/Images/women.svg'
+import Illustration from '../assets/Images/launch.svg'
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
         align="center"
         justifyContent="space-between"
       >
-
        <Flex
         maxWidth={600}
        >
@@ -58,6 +56,7 @@ export default function Home() {
        </Flex>
         <Illustration />
       </Flex>
+
     </>
   )
 }
