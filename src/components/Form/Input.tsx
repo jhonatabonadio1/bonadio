@@ -14,8 +14,9 @@ export function Input({name, size, icon, ...rest}: InputProps){
                 icon &&
                 <InputLeftElement 
                     pointerEvents='none'
-                    children={icon}
-                />
+                >
+                    {icon}
+                </InputLeftElement>
             }
             <ChakraInput 
                 name={name}
