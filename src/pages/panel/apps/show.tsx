@@ -1,14 +1,14 @@
 import React, { ReactNode } from "react";
-import { Avatar, Box, Divider, Flex, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react";
-import { Header } from "../../components/Panel/Header";
-import { Sidebar } from "../../components/Panel/Sidebar/Sidebar";
-import { GridBox } from "../../components/Panel/GridBox";
+import { Avatar, Box, Flex, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Header } from "../../../components/Panel/Header";
+import { Sidebar } from "../../../components/Panel/Sidebar/Sidebar";
+import { GridBox } from "../../../components/Panel/GridBox";
 import { Tooltip } from '@chakra-ui/react'
 
-import ReactJS from '../../assets/Images/reactjs.svg'
-import Ruby from '../../assets/Images/ruby.svg'
-import Typescript from '../../assets/Images/typescript.svg'
-import Javascript from '../../assets/Images/javascript.svg'
+import ReactJS from '../../../assets/Images/reactjs.svg'
+import Ruby from '../../../assets/Images/ruby.svg'
+import Typescript from '../../../assets/Images/typescript.svg'
+import Javascript from '../../../assets/Images/javascript.svg'
 
 
 interface Tooltip{

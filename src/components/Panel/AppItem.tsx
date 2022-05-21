@@ -65,7 +65,7 @@ export function AppItem({id, appName, appImage, status, lastCommit}: App){
             <HStack
                 spacing="4"
             >
-                <NextLink href="/apps/show">
+                <NextLink href="./apps/show">
                     <Icon as={RiArrowRightLine} fontSize="28" cursor="pointer" _hover={{opacity: .7}} />
                 </NextLink>
             </HStack>

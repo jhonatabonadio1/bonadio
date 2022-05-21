@@ -1,7 +1,7 @@
 import { Flex, SimpleGrid } from "@chakra-ui/react";
-import { Header } from "../components/Panel/Header";
-import { Sidebar } from "../components/Panel/Sidebar/Sidebar";
-import { GridBox } from "../components/Panel/GridBox";
+import { Header } from "../../components/Panel/Header";
+import { Sidebar } from "../../components/Panel/Sidebar/Sidebar";
+import { GridBox } from "../../components/Panel/GridBox";
 
 export default function Support(){
     return(

@@ -20,32 +20,32 @@ export function Sidebar(){
                         <SidebarItem 
                             name="Dashboard" 
                             icon={RiDashboardLine} 
-                            active={router.pathname === '/dashboard'} 
-                            href="/dashboard"
+                            active={router.pathname === '/panel/dashboard'} 
+                            href="/panel/dashboard"
                         />
                         <SidebarItem 
                             name="Meus aplicativos" 
                             icon={RiAppsLine} 
-                            active={router.asPath === '/apps'} 
-                            href="/apps"
+                            active={router.asPath === '/panel/apps'} 
+                            href="/panel/apps"
                         />
                         <SidebarItem 
                             name="Pedidos" 
                             icon={RiBoxingLine} 
-                            active={router.pathname === '/orders'} 
-                            href="/orders"
+                            active={router.pathname === '/panel/orders'} 
+                            href="/panel/orders"
                         />
                         <SidebarItem 
                             name="Pagamentos" 
                             icon={RiBankCardLine} 
-                            active={router.pathname === '/payments'} 
-                            href="/payments"
+                            active={router.pathname === '/panel/payments'} 
+                            href="/panel/payments"
                         />
                         <SidebarItem 
                             name="Histórico" 
                             icon={RiHistoryLine} 
-                            active={router.pathname === '/history'} 
-                            href="/history"
+                            active={router.pathname === '/panel/history'} 
+                            href="/panel/history"
                         />
                     </Stack>
                 </Box>
@@ -61,14 +61,14 @@ export function Sidebar(){
                         <SidebarItem 
                             name="Contato" 
                             icon={RiPhoneLine} 
-                            active={router.pathname === '/support'} 
-                            href="/support" 
+                            active={router.pathname === '/panel/support'} 
+                            href="/panel/support" 
                         />
                         <SidebarItem 
                             name="Mensagens" 
                             icon={RiMessageLine} 
-                            active={router.pathname === '/inbox'} 
-                            href="/inbox"
+                            active={router.pathname === '/panel/inbox'} 
+                            href="/panel/inbox"
                         />
                         <SidebarItem 
                             name="Sair" 

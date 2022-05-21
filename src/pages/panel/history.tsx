@@ -1,9 +1,9 @@
 import { Flex, SimpleGrid, Stack } from "@chakra-ui/react";
-import { Header } from "../components/Panel/Header";
-import { Sidebar } from "../components/Panel/Sidebar/Sidebar";
-import { GridBox } from "../components/Panel/GridBox";
-import { HistoryItem } from "../components/Panel/HistoryItem";
-import { Pagination } from "../components/Pagination";
+import { Header } from "../../components/Panel/Header";
+import { Sidebar } from "../../components/Panel/Sidebar/Sidebar";
+import { GridBox } from "../../components/Panel/GridBox";
+import { HistoryItem } from "../../components/Panel/HistoryItem";
+import { Pagination } from "../../components/Pagination";
 
 export default function History(){
     return(

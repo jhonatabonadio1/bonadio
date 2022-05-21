@@ -115,7 +115,7 @@ export function Header(){
                         >
                             Minha conta
                         </MenuItem>
-                        <NextLink href="/payments">
+                        <NextLink href="./payments">
                             <MenuItem 
                                 icon={<RiBankCardLine color="#D53F8C" size="1.3rem"/>}
                                 py="3"
@@ -133,7 +133,7 @@ export function Header(){
                                 Pagamentos
                             </MenuItem>
                         </NextLink>
-                        <NextLink href="/support">
+                        <NextLink href="./support">
                             <MenuItem 
                                 icon={<RiPhoneLine color="#D53F8C" size="1.3rem"/>}
                                 py="3"

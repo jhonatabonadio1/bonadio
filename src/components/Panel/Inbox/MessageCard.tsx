@@ -30,7 +30,7 @@ export function MessageCard({author, message, date, online}: Message){
                         }
                     </HStack>
                     <Text >{message}</Text>
-                    <Text fontSize="small" color="gray.300" mt="1">{date}</Text>
+
                 </Box>
             </HStack>
         </Flex>
