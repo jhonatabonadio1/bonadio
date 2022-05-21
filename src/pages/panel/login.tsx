@@ -2,7 +2,8 @@ import {
     Button, 
     Flex, 
     Stack, 
-    Link
+    Link,
+    Text
 } from '@chakra-ui/react'
 import {EmailIcon, LockIcon} from '@chakra-ui/icons'
 import { Input } from '../../components/Form/Input'
@@ -13,6 +14,10 @@ export default function Login(){
         <>
             <title>Login | Bonadio</title>
             <Flex w="100vw" h="100vh" flexDir="column" align="center" justify="center">
+                <Text fontSize="5xl" fontWeight="700" letterSpacing="tight" mb="5">
+                    bonadio
+                    <Text as="span" color="pink.500">.</Text>
+                </Text>
                <Flex 
                     as="form" 
                     w="100%" 
@@ -24,6 +29,7 @@ export default function Login(){
                     action="./dashboard"
                 >
                     <Stack>
+                        <Text as="h1" fontSize="2xl" color="gray.300" fontWeight="bold" mb="2">Faça o login</Text>
                         <Input 
                             type="email"
                             name="email"
@@ -38,15 +44,17 @@ export default function Login(){
                             size="lg"
                             icon={<LockIcon color="gray.700" />}
                         />
+                      <Flex>
                         <Link 
-                            color="pink.500" 
-                            fontWeight="700"
-                            colorScheme="purple"
-                            _hover={{
-                                textDecor: "none",
-                                color: "pink.400"
-                            }}
-                        >Esqueci minha senha</Link>
+                                color="pink.500" 
+                                fontWeight="700"
+                                colorScheme="purple"
+                                _hover={{
+                                    textDecor: "none",
+                                    color: "pink.600"
+                                }}
+                            >Esqueci minha senha</Link>
+                      </Flex>
                     </Stack>
                     <Button type="submit" mt="6" colorScheme="pink" size="lg">Entrar</Button>
                 </Flex>
