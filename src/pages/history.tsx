@@ -1,8 +1,9 @@
 import { Flex, SimpleGrid, Stack } from "@chakra-ui/react";
 import { Header } from "../components/Panel/Header";
-import { Sidebar } from "../components/Sidebar/Sidebar";
+import { Sidebar } from "../components/Panel/Sidebar/Sidebar";
 import { GridBox } from "../components/Panel/GridBox";
 import { HistoryItem } from "../components/Panel/HistoryItem";
+import { Pagination } from "../components/Pagination";
 
 export default function History(){
     return(
@@ -23,46 +24,15 @@ export default function History(){
                                             name: "Jhonata Lima",
                                             description: "Desenvolvedor"
                                         }}
-                                        date="Publicado há 2 horas atrás"
+                                        date="Há 2 horas"
                                         project={{
                                             id: "81495184",
                                             name: "Site de rifas"
                                         }}
-                                   />
-                                    <HistoryItem 
-                                        author={{
-                                            name: "Jhonata Lima",
-                                            description: "Desenvolvedor"
-                                        }}
-                                        date="Publicado há 2 horas atrás"
-                                        project={{
-                                            id: "81495184",
-                                            name: "Site de rifas"
-                                        }}
-                                   />
-                                    <HistoryItem 
-                                        author={{
-                                            name: "Jhonata Lima",
-                                            description: "Desenvolvedor"
-                                        }}
-                                        date="Publicado há 2 horas atrás"
-                                        project={{
-                                            id: "81495184",
-                                            name: "Site de rifas"
-                                        }}
-                                   />
-                                    <HistoryItem 
-                                        author={{
-                                            name: "Jhonata Lima",
-                                            description: "Desenvolvedor"
-                                        }}
-                                        date="Publicado há 2 horas atrás"
-                                        project={{
-                                            id: "81495184",
-                                            name: "Site de rifas"
-                                        }}
+                                        commit="Projeto criado"
                                    />
                                 </Stack>
+                                <Pagination />
                             </GridBox>
                         </SimpleGrid>
                     </Flex>

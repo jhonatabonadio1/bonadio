@@ -12,9 +12,10 @@ interface History{
         id: string;
         name: string;
     }
+    commit: string;
 }
 
-export function HistoryItem({author, date, project}: History){
+export function HistoryItem({author, commit, date, project}: History){
     return(
         <Flex
             align="center"
@@ -47,7 +48,7 @@ export function HistoryItem({author, date, project}: History){
                     <Text
                         color="gray.300"
                     >
-                    {date}
+                    {commit}
                     <Text as="span" fontWeight="bold" ml="1">
                         · #{project.id}
                     </Text>
@@ -56,8 +57,7 @@ export function HistoryItem({author, date, project}: History){
             <HStack
                 spacing="4"
             >
-                <Icon as={RiChat1Line} fontSize="28" />
-                <Icon as={RiArrowRightLine} fontSize="28" />
+                <Text color="gray.300">{date}</Text>
             </HStack>
         </Flex>
     )

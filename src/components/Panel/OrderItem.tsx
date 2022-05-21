@@ -29,11 +29,7 @@ export function OrderItem({id, name, description, status, date}: OrderItem){
                 </Box>
             </HStack>
             <Box
-                pr="8"
-                mr="8"
                 flex="1"
-                borderRightWidth={1}
-                borderColor="gray.700"
             >
                 <Flex align="center">
                     {
@@ -56,11 +52,7 @@ export function OrderItem({id, name, description, status, date}: OrderItem){
                 </Text>
             </Text>
             </Box>
-            <HStack
-                spacing="4"
-            >
-                <Icon as={RiArrowRightLine} fontSize="28" />
-            </HStack>
+
         </Flex>
     )
 }

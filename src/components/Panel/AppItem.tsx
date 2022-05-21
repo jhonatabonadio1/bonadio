@@ -1,5 +1,6 @@
-import { Avatar, Box, Flex, HStack, Icon, Stack, Text } from "@chakra-ui/react";
+import { Avatar, Box, Flex, HStack, Icon, Text } from "@chakra-ui/react";
 import { RiArrowRightLine, RiCheckboxBlankCircleFill } from "react-icons/ri";
+import NextLink from 'next/link'
 
 interface App{
     id: string
@@ -64,7 +65,9 @@ export function AppItem({id, appName, appImage, status, lastCommit}: App){
             <HStack
                 spacing="4"
             >
-                <Icon as={RiArrowRightLine} fontSize="28" />
+                <NextLink href="/apps/show">
+                    <Icon as={RiArrowRightLine} fontSize="28" cursor="pointer" _hover={{opacity: .7}} />
+                </NextLink>
             </HStack>
         </Flex>
     )

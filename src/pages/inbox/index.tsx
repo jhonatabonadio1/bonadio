@@ -1,12 +1,12 @@
 import { Box, Flex, Icon, SimpleGrid, Stack, Input, Text, HStack, Avatar } from "@chakra-ui/react";
-import { Header } from "../components/Panel/Header";
-import { Sidebar } from "../components/Sidebar/Sidebar";
-import { GridBox } from "../components/Panel/GridBox";
-import { MessageCard } from "../components/Inbox/MessageCard";
-import { InboxHeader } from "../components/Inbox/Header";
+import { Header } from "../../components/Panel/Header";
+import { Sidebar } from "../../components/Panel/Sidebar/Sidebar";
+import { GridBox } from "../../components/Panel/GridBox";
+import { MessageCard } from "../../components/Panel/Inbox/MessageCard";
+import { InboxHeader } from "../../components/Panel/Inbox/Header";
 import { RiSendPlane2Line } from "react-icons/ri";
-import { Message } from "../components/Inbox/Message";
-import { DateBadge } from "../components/Inbox/DateBadge";
+import { Message } from "../../components/Panel/Inbox/Message";
+import { DateBadge } from "../../components/Panel/Inbox/DateBadge";
 
 export default function Inbox(){
     return(

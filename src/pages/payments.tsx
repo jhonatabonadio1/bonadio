@@ -1,8 +1,9 @@
 import { Flex, SimpleGrid, Stack } from "@chakra-ui/react";
 import { Header } from "../components/Panel/Header";
-import { Sidebar } from "../components/Sidebar/Sidebar";
+import { Sidebar } from "../components/Panel/Sidebar/Sidebar";
 import { GridBox } from "../components/Panel/GridBox";
 import { PaymentItem } from "../components/Panel/PaymentItem";
+import { Pagination } from "../components/Pagination";
 
 export default function Payments(){
     return(
@@ -35,6 +36,7 @@ export default function Payments(){
                                         value="R$7500,00"
                                    /> 
                                 </Stack>
+                                <Pagination />
                             </GridBox>
                         </SimpleGrid>
                     </Flex>

@@ -1,8 +1,9 @@
 import { Flex, SimpleGrid, Stack } from "@chakra-ui/react";
 import { Header } from "../components/Panel/Header";
-import { Sidebar } from "../components/Sidebar/Sidebar";
+import { Sidebar } from "../components/Panel/Sidebar/Sidebar";
 import { GridBox } from "../components/Panel/GridBox";
 import { OrderItem } from "../components/Panel/OrderItem";
+import { Pagination } from "../components/Pagination";
 
 export default function Orders(){
     return(
@@ -40,6 +41,7 @@ export default function Orders(){
                                         status="Pedido recusado"
                                    />
                                 </Stack>
+                                <Pagination />
                             </GridBox>
                         </SimpleGrid>
                     </Flex>

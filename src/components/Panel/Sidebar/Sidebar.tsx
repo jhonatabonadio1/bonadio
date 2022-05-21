@@ -26,7 +26,7 @@ export function Sidebar(){
                         <SidebarItem 
                             name="Meus aplicativos" 
                             icon={RiAppsLine} 
-                            active={router.pathname === '/apps'} 
+                            active={router.asPath === '/apps'} 
                             href="/apps"
                         />
                         <SidebarItem 

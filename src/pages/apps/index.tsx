@@ -1,10 +1,11 @@
 import { Flex, SimpleGrid, Stack } from "@chakra-ui/react";
-import { Header } from "../components/Panel/Header";
-import { Sidebar } from "../components/Sidebar/Sidebar";
-import { GridBox } from "../components/Panel/GridBox";
-import { AppItem } from "../components/Panel/AppItem";
+import { Header } from "../../components/Panel/Header";
+import { Sidebar } from "../../components/Panel/Sidebar/Sidebar";
+import { GridBox } from "../../components/Panel/GridBox";
+import { AppItem } from "../../components/Panel/AppItem";
+import { Pagination } from "../../components/Pagination";
 
-export default function Applications(){
+export default function AppList(){
     return(
         <>
         <title>Meus aplicativos | Bonadio.</title>
@@ -37,6 +38,7 @@ export default function Applications(){
                                         }}
                                    />
                                 </Stack>
+                                <Pagination />
                             </GridBox>
                         </SimpleGrid>
                     </Flex>

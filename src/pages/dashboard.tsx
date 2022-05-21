@@ -1,6 +1,6 @@
 import { Box, Flex, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { Header } from "../components/Panel/Header";
-import { Sidebar } from "../components/Sidebar/Sidebar";
+import { Sidebar } from "../components/Panel/Sidebar/Sidebar";
 import CountUp from 'react-countup';
 import { GridBox } from "../components/Panel/GridBox";
 import { NotificationItem } from "../components/Panel/NotificationItem";
