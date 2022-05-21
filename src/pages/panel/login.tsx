@@ -14,7 +14,7 @@ export default function Login(){
         <>
             <title>Login | Bonadio</title>
             <Flex w="100vw" h="100vh" flexDir="column" align="center" justify="center">
-                <Text fontSize="5xl" fontWeight="700" letterSpacing="tight" mb="5">
+                <Text fontSize="5xl" fontWeight="700" letterSpacing="tight" mb="3">
                     bonadio
                     <Text as="span" color="pink.500">.</Text>
                 </Text>
@@ -29,7 +29,7 @@ export default function Login(){
                     action="./dashboard"
                 >
                     <Stack>
-                        <Text as="h1" fontSize="2xl" color="gray.300" fontWeight="bold" mb="2">Faça o login</Text>
+                       
                         <Input 
                             type="email"
                             name="email"
