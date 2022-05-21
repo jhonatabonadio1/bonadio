@@ -115,7 +115,7 @@ export function Header(){
                         >
                             Minha conta
                         </MenuItem>
-                        <NextLink href="./payments">
+                        <NextLink href="/panel/payments">
                             <MenuItem 
                                 icon={<RiBankCardLine color="#D53F8C" size="1.3rem"/>}
                                 py="3"

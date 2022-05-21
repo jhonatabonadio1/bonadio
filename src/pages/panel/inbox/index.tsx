@@ -13,7 +13,7 @@ export default function Inbox(){
         <>
         <title>Caixa de entrada | Bonadio.</title>
             <Flex direction="column" h="100vh">
-                <Header />
+            <Header />
                 <Flex w="100%" my="8" maxWidth={1480} mx="auto" px="6">
                     <Sidebar />
                     <Flex flex="1" gap="4" flexDir="column">
@@ -63,10 +63,25 @@ export default function Inbox(){
                                     px="8"
                                     py="8"
                                     flexDir="column"
-                                    minH={400}
-                                    maxH={400}
+                                    minH={350}
+                                    maxH={350}
                                     borderRadius={8}
                                     overflow="auto"
+                                    css={{
+                                        '&::-webkit-scrollbar': {
+                                          width: '6px',
+                                    
+                                        },
+                                        '&::-webkit-scrollbar-track': {
+                                          width: '6px',
+                                          marginTop: 2,
+                                          marginBottom: 2
+                                        },
+                                        '&::-webkit-scrollbar-thumb': {
+                                          background: "rgba(255,255,255, 0.1)",
+                                          borderRadius: '24px',
+                                        },
+                                      }}
                                 >
                                   <DateBadge date="Segunda-feira"/>
                                     <Stack
