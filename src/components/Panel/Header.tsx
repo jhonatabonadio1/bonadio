@@ -1,5 +1,27 @@
-import {Box, Flex, HStack, Icon, Input, Text, Avatar} from '@chakra-ui/react'
-import {RiNotificationLine, RiSearchLine} from 'react-icons/ri'
+import {
+    Box, 
+    Flex, 
+    HStack, 
+    Icon, 
+    Input, 
+    Text, 
+    Avatar, 
+    Menu, 
+    MenuButton, 
+    MenuItem, 
+    MenuList
+} from '@chakra-ui/react'
+
+import {
+    RiBankCardLine, 
+    RiLogoutCircleLine, 
+    RiNotificationLine, 
+    RiPhoneLine, 
+    RiSearchLine, 
+    RiUserLine
+} from 'react-icons/ri'
+
+import NextLink from 'next/link'
 
 export function Header(){
     return(
@@ -56,20 +78,99 @@ export function Header(){
                 >
                     <Icon as={RiNotificationLine} fontSize="20" />
                 </HStack>
-                <Flex
-                    align="center"
-                >
-                    <Box
-                        mr="4"
-                        textAlign="right"
+                <Menu placement="bottom-end">
+                    <MenuButton>
+                        <Flex align="center">
+                            <Box
+                                mr="4"
+                                textAlign="right"
+                            >
+                                <Text>Jhonata Bonadio</Text>
+                                <Text
+                                    color="gray.300" fontSize="small"
+                                >jhonbonadio@gmail.com</Text>
+                            </Box>
+                            <Avatar size="md" name="Jhonata Bonadio"/>
+                        </Flex>
+                    </MenuButton>
+                    <MenuList 
+                        bg="gray.800"
+                        border="none"
+                        boxShadow="lg"
+                        mt="2"
                     >
-                        <Text>Jhonata Bonadio</Text>
-                        <Text
-                            color="gray.300" fontSize="small"
-                        >jhonbonadio@gmail.com</Text>
-                    </Box>
-                    <Avatar size="md" name="Jhonata Bonadio"/>
-                </Flex>
+                        <MenuItem 
+                            icon={<RiUserLine color="#D53F8C" size="1.3rem"/>}
+                            py="3"
+                            px="5"
+                            _hover={{
+                                bg: "gray.900"
+                            }}
+                            _active={{
+                                bg: "gray.900"
+                            }}
+                            _focus={{
+                                bg: "gray.900"
+                            }}
+                        >
+                            Minha conta
+                        </MenuItem>
+                        <NextLink href="/payments">
+                            <MenuItem 
+                                icon={<RiBankCardLine color="#D53F8C" size="1.3rem"/>}
+                                py="3"
+                                px="5"
+                                _hover={{
+                                    bg: "gray.900"
+                                }}
+                                _active={{
+                                    bg: "gray.900"
+                                }}
+                                _focus={{
+                                    bg: "gray.900"
+                                }}
+                            >
+                                Pagamentos
+                            </MenuItem>
+                        </NextLink>
+                        <NextLink href="/support">
+                            <MenuItem 
+                                icon={<RiPhoneLine color="#D53F8C" size="1.3rem"/>}
+                                py="3"
+                                px="5"
+                                _hover={{
+                                    bg: "gray.900"
+                                }}
+                                _active={{
+                                    bg: "gray.900"
+                                }}
+                                _focus={{
+                                    bg: "gray.900"
+                                }}
+                            >
+                                Contato
+                            </MenuItem>
+                        </NextLink>
+                        <NextLink href="/">
+                            <MenuItem 
+                                icon={<RiLogoutCircleLine color="#D53F8C" size="1.3rem"/>}
+                                py="3"
+                                px="5"
+                                _hover={{
+                                    bg: "gray.900"
+                                }}
+                                _active={{
+                                    bg: "gray.900"
+                                }}
+                                _focus={{
+                                    bg: "gray.900"
+                                }}
+                            >
+                                Sair
+                            </MenuItem>
+                        </NextLink>
+                    </MenuList>
+                </Menu>
             </Flex>
         </Flex>
     )

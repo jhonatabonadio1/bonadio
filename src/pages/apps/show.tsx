@@ -1,14 +1,22 @@
+import React, { ReactNode } from "react";
 import { Avatar, Box, Divider, Flex, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { Header } from "../../components/Panel/Header";
 import { Sidebar } from "../../components/Panel/Sidebar/Sidebar";
 import { GridBox } from "../../components/Panel/GridBox";
+import { Tooltip } from '@chakra-ui/react'
 
 import ReactJS from '../../assets/Images/reactjs.svg'
 import Ruby from '../../assets/Images/ruby.svg'
 import Typescript from '../../assets/Images/typescript.svg'
 import Javascript from '../../assets/Images/javascript.svg'
 
+
+interface Tooltip{
+    children: ReactNode;
+}
+
 export default function AppShow(){
+
     return(
         <>
         <title>Meus aplicativos | Bonadio.</title>
@@ -18,7 +26,7 @@ export default function AppShow(){
                     <Sidebar />
                     <Flex flex="1" gap="4" flexDir="column">
                         <SimpleGrid gap="4" gridTemplateColumns="2fr 1fr" minChildWidth="320px" alignItems="flex-start">
-                            <SimpleGrid>
+                            <SimpleGrid gap="4">
                                 <GridBox>
                                     <Stack>
                                         <HStack
@@ -32,16 +40,27 @@ export default function AppShow(){
                                         </HStack>
                                     </Stack>
                                 </GridBox>
+                                <GridBox>
+                          
+                                </GridBox>
                             </SimpleGrid>
                             <SimpleGrid gap="4">
                                 <GridBox
                                     name="Tecnologias"
                                 >
                                     <HStack>
-                                        <ReactJS />
-                                        <Ruby />
-                                        <Javascript />
-                                        <Typescript />
+                                        <Tooltip label='ReactJS' shouldWrapChildren>
+                                            <ReactJS />
+                                        </Tooltip>
+                                        <Tooltip label='Ruby' shouldWrapChildren>
+                                            <Ruby />
+                                        </Tooltip>
+                                        <Tooltip label='Javascript' shouldWrapChildren>
+                                            <Javascript />
+                                        </Tooltip>
+                                        <Tooltip label='Typescript' shouldWrapChildren>
+                                            <Typescript />
+                                        </Tooltip>
                                         <Text fontWeight="bold">+ 2</Text>
                                     </HStack>
                                 </GridBox>
@@ -49,9 +68,15 @@ export default function AppShow(){
                                     name="Equipe"
                                 >
                                     <HStack>
-                                        <Avatar name="Jhonata Bonadio" />
-                                        <Avatar name="Lucas Assis" />
-                                        <Avatar name="Pedro Viana" />
+                                        <Tooltip label='Jhonata Bonadio' shouldWrapChildren>
+                                            <Avatar name="Jhonata Bonadio" />
+                                        </Tooltip>
+                                        <Tooltip label='Lucas Assis' shouldWrapChildren>
+                                            <Avatar name="Lucas Assis" />
+                                        </Tooltip>
+                                        <Tooltip label='Pedro Viana' shouldWrapChildren>
+                                            <Avatar name="Pedro Viana" />
+                                        </Tooltip>
                                         <Text fontWeight="bold">+ 12</Text>
                                     </HStack>
                                 </GridBox>
