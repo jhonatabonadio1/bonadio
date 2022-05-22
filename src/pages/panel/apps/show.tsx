@@ -28,7 +28,6 @@ export default function AppShow(){
                 <Header />
                 <Flex w="100%" my="8" maxWidth={1480} mx="auto" px="6">
                     <Sidebar />
-                    
                     <Flex flex="1" gap="4" flexDir="column">
                         <HStack align="center" mb="2">
                             <NextLink href="./">
