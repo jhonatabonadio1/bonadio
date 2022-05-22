@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react";
-import { Avatar, Box, Flex, HStack, Icon, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Avatar, AvatarGroup, Box, Divider, Flex, HStack, Icon, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 import { Tooltip } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { RiArrowLeftLine } from "react-icons/ri";
+import { RiArrowLeftLine, RiCheckboxBlankCircleFill } from "react-icons/ri";
 
 import { Header } from "../../../components/Panel/Header";
 import { Sidebar } from "../../../components/Panel/Sidebar/Sidebar";
@@ -50,21 +50,27 @@ export default function AppShow(){
                                 
                                 <GridBox>
                                     <Stack>
-                                        
-                                        <HStack
-                                            spacing="6"
-                                        >
-                                            <Avatar name="Site de rifas" size="xl"/>
-                                            <Box>
-                                                <Text fontWeight="bold" fontSize="3xl" lineHeight="normal">Site de rifas</Text>
-                                                <Text color="gray.300" fontSize="xl">#3412414</Text>
-                                            </Box>
-                                        </HStack>
+                                        <Flex justify="space-between" align="center">
+                                            <HStack
+                                                spacing="4"
+                                            >
+                                                <Avatar name="Site de rifas" size="lg"/>
+                                                <Box>
+                                                    <Text fontWeight="bold" fontSize="2xl" lineHeight="normal">Site de rifas</Text>
+                                                    <Text color="gray.300" fontSize="x">#3412414</Text>
+                                                </Box>
+                                            </HStack>
+                                            <Flex align="center">
+                                                <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="orange.400"/>
+                                                <Text fontWeight="bold">Em andamento</Text>
+                                            </Flex>
+                                        </Flex>
                                     </Stack>
+                                    <Divider my="6" borderColor="gray.600"/>
+                                    <Text fontSize="lg" mb="4">Informações</Text>
+
                                 </GridBox>
-                                <GridBox>
-                          
-                                </GridBox>
+                    
                             </SimpleGrid>
                             <SimpleGrid gap="4">
                                 <GridBox
@@ -90,16 +96,20 @@ export default function AppShow(){
                                     name="Equipe"
                                 >
                                     <HStack>
-                                        <Tooltip label='Jhonata Bonadio' shouldWrapChildren>
+                                        <AvatarGroup 
+                                            size='md' 
+                                            max={4}
+                                            colorScheme="green"
+                                            borderColor="gray.800"
+                                            color="gray.800"
+                                        >
                                             <Avatar name="Jhonata Bonadio" />
-                                        </Tooltip>
-                                        <Tooltip label='Lucas Assis' shouldWrapChildren>
-                                            <Avatar name="Lucas Assis" />
-                                        </Tooltip>
-                                        <Tooltip label='Pedro Viana' shouldWrapChildren>
+                                            <Avatar name="Lucas Assis" />   
                                             <Avatar name="Pedro Viana" />
-                                        </Tooltip>
-                                        <Text fontWeight="bold">+ 12</Text>
+                                            <Avatar name="Pedro Viana" />
+                                            <Avatar name="Pedro Viana" />
+                                            <Avatar name="Pedro Viana" />
+                                        </AvatarGroup>
                                     </HStack>
                                 </GridBox>
                                 <GridBox

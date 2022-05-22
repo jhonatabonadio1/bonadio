@@ -35,7 +35,12 @@ export function Header(){
             align="center"
             px="6"
         >
-            <Text fontSize="3xl" fontWeight="700" letterSpacing="tight" w="64">
+            <Text 
+                fontSize={["2xl", "3xl"]} 
+                fontWeight="700" 
+                letterSpacing="tight" 
+                w="64"
+            >
                 bonadio
                 <Text as="span" color="pink.500">.</Text>
             </Text>

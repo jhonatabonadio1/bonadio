@@ -1,4 +1,4 @@
-import { Avatar, Box, Flex, HStack, Stack, Text } from "@chakra-ui/react";
+import { Avatar, AvatarBadge, Box, Flex, HStack, Stack, Text } from "@chakra-ui/react";
 
 interface Message{
     type: "received" | "sended";
@@ -18,7 +18,10 @@ export function Message({type, author, date, message}: Message){
             <HStack align="flex-start">
                 <Stack>
                     <HStack>
-                        <Avatar name={author.name} w="8" h="8" size="sm"/>
+                        
+                        <Avatar name={author.name} w="8" h="8" size="sm">
+                            
+                        </Avatar>
                         <Box
                             py="2"
                             px="4"
