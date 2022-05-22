@@ -6,7 +6,7 @@ import {
     Text
 } from '@chakra-ui/react'
 import {EmailIcon, LockIcon} from '@chakra-ui/icons'
-import { Input } from '../../components/Form/Input'
+import { Input } from '../components/Form/Input'
 
 export default function Login(){
 
@@ -26,7 +26,7 @@ export default function Login(){
                     p="8"
                     borderRadius={8}
                     flexDir="column"
-                    action="./dashboard"
+                    action="/panel/dashboard"
                 >
                     <Stack>
                        

@@ -1,14 +1,18 @@
 import React, { ReactNode } from "react";
-import { Avatar, Box, Flex, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Avatar, Box, Flex, HStack, Icon, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import { Tooltip } from '@chakra-ui/react'
+import NextLink from 'next/link'
+import { RiArrowLeftLine } from "react-icons/ri";
+
 import { Header } from "../../../components/Panel/Header";
 import { Sidebar } from "../../../components/Panel/Sidebar/Sidebar";
 import { GridBox } from "../../../components/Panel/GridBox";
-import { Tooltip } from '@chakra-ui/react'
 
 import ReactJS from '../../../assets/Images/reactjs.svg'
 import Ruby from '../../../assets/Images/ruby.svg'
 import Typescript from '../../../assets/Images/typescript.svg'
 import Javascript from '../../../assets/Images/javascript.svg'
+
 
 
 interface Tooltip{
@@ -24,11 +28,30 @@ export default function AppShow(){
                 <Header />
                 <Flex w="100%" my="8" maxWidth={1480} mx="auto" px="6">
                     <Sidebar />
+                    
                     <Flex flex="1" gap="4" flexDir="column">
+                        <HStack align="center" mb="2">
+                            <NextLink href="./">
+                                <Icon 
+                                    as={RiArrowLeftLine}
+                                    fontSize="3xl"
+                                    color="gray.300"
+                                    
+                                    _hover={{
+                                        color: "gray.600",
+                                    }}
+                                    cursor="pointer"
+                                    transition="color 0.2s ease"
+                                />
+                            </NextLink>
+                            <Text fontSize="larger">Meus aplicativos</Text>
+                        </HStack>
                         <SimpleGrid gap="4" gridTemplateColumns="2fr 1fr" minChildWidth="320px" alignItems="flex-start">
                             <SimpleGrid gap="4">
+                                
                                 <GridBox>
                                     <Stack>
+                                        
                                         <HStack
                                             spacing="6"
                                         >

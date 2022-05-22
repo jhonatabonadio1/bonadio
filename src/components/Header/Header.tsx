@@ -67,7 +67,7 @@ export function Header(){
                         py="1"
                         color="gray.300"
                     >
-                        <NextLink href='/panel/login'>
+                        <NextLink href='/login'>
                             <Button
                                 bg="transparent"
                                 borderColor="pink.500"

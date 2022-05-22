@@ -19,6 +19,7 @@ export function OrderItem({id, name, description, status, date}: OrderItem){
                 spacing="4"
                 pr="8"
                 mr="8"
+                flex="1"
                 borderRightWidth={1}
                 borderColor="gray.700"
                 w="56"
@@ -28,9 +29,23 @@ export function OrderItem({id, name, description, status, date}: OrderItem){
                     <Text color="gray.300">{description}</Text>
                 </Box>
             </HStack>
-            <Box
-                flex="1"
+
+            <HStack 
+                spacing="4"
+                pr="8"
+                mr="8"
+                
+                borderRightWidth={1}
+                borderColor="gray.700"
+                w="56"
             >
+                <Box>
+                    <Text fontWeight="bold">#{id}</Text>
+                    
+                    <Text color="gray.300">{date}</Text>
+                </Box>
+            </HStack>
+            <Box >
                 <Flex align="center">
                     {
                         status == "Pedido aprovado" && <Icon as={RiCheckboxBlankCircleFill} fontSize="8" mr="2" color="green.300"/>
@@ -43,14 +58,7 @@ export function OrderItem({id, name, description, status, date}: OrderItem){
                     }
                     <Text fontWeight="bold">{status}</Text>
                 </Flex>
-            <Text
-                color="gray.300"
-            >
-                #{id}
-                <Text as="span" fontWeight="bold" ml="1">
-                    · {date}
-                </Text>
-            </Text>
+          
             </Box>
 
         </Flex>
