@@ -22,7 +22,7 @@ export function MessageCard({author, message, date, online}: Message){
             >
                 <Avatar size="md" name={author.name} src={author.avatar}>
                     {online &&
-                        <AvatarBadge boxSize='1.3rem' bg='green.500' />
+                        <AvatarBadge boxSize='1.2rem' bg='green.500' borderWidth={2} />
                     }
                 </Avatar>
                 <Box>
