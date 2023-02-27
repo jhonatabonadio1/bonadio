@@ -1,16 +1,11 @@
 module.exports = {
   root: true,
-  extends: ['next/core-web-vitals'],
+  extends: ['next/core-web-vitals', 'prettier'],
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint'],
   rules: {
     'no-console': 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        endOfLine: 'auto',
-      },
-    ],
+    
   },
   overrides: [
     {
